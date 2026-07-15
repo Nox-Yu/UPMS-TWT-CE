@@ -1,0 +1,39 @@
+\begin{table}[tb]
+  \centering
+  \caption{Performance results of different models.}
+  \label{tab:model_comparison}
+  \vspace{0.2cm}
+  \footnotesize
+  \setlength{\tabcolsep}{3.0pt}
+  \renewcommand{\arraystretch}{0.95}
+  \resizebox{\textwidth}{!}{
+  \begin{tabular}{cc ccc ccc ccc ccc}
+    \toprule
+    \multirow{2}{*}{$m$} & \multirow{2}{*}{$n$}
+    & \multicolumn{3}{c}{MILP}
+    & \multicolumn{3}{c}{LO model}
+    & \multicolumn{3}{c}{NW model}
+    & \multicolumn{3}{c}{TI model} \\
+    \cmidrule(lr){3-5}
+    \cmidrule(lr){6-8}
+    \cmidrule(lr){9-11}
+    \cmidrule(lr){12-14}
+    & & Opt-N & \(\overline{\mathrm{g}}_{\mathrm{Cplex}}(\%)\) & \(\bar{t}\)(s)
+      & Opt-N & \(\overline{\mathrm{g}}_{\mathrm{Cplex}}(\%)\) & \(\bar{t}\)(s)
+      & Opt-N & \(\overline{\mathrm{g}}_{\mathrm{Cplex}}(\%)\) & \(\bar{t}\)(s)
+      & Opt-N & \(\overline{\mathrm{g}}_{\mathrm{Cplex}}(\%)\) & \(\bar{t}\)(s) \\
+    \midrule
+      \multirow{2}{*}{2} & 10 & \textbf{160} & \textbf{0.00} & \textbf{7.05} & 156 & 1.07 & 200.05 & 153 & 1.81 & 216.33 & 160 & 0.00 & 317.25 \\
+       & 14 & \textbf{158} & \textbf{0.29} & \textbf{123.20} & 12 & 38.57 & 1725.71 & 15 & 39.25 & 1692.32 & 86 & 11.92 & 1173.59 \\
+      \multirow{2}{*}{3} & 15 & \textbf{151} & \textbf{1.20} & \textbf{216.71} & 58 & 20.33 & 1334.20 & 49 & 21.18 & 1420.27 & 92 & 16.78 & 1239.97 \\
+       & 21 & \textbf{101} & \textbf{9.80} & \textbf{856.99} & 1 & 32.25 & 1797.62 & 0 & 33.47 & 1800.18 & 24 & 33.39 & 1679.56 \\
+      \multirow{2}{*}{4} & 20 & \textbf{127} & \textbf{5.81} & \textbf{612.79} & 6 & 21.54 & 1759.61 & 6 & 22.88 & 1777.80 & 39 & 19.41 & 1646.92 \\
+       & 28 & \textbf{58} & \textbf{14.15} & \textbf{1305.33} & 0 & 30.67 & 1800.47 & 0 & 41.90 & 1800.42 & 5 & 56.77 & 1812.86 \\
+      \multirow{2}{*}{5} & 25 & \textbf{105} & \textbf{7.24} & \textbf{879.07} & 0 & 19.76 & 1800.73 & 0 & 22.17 & 1800.50 & 25 & 31.96 & 1721.69 \\
+       & 35 & \textbf{41} & \textbf{23.90} & \textbf{1470.62} & 0 & 33.03 & 1800.73 & 0 & 53.57 & 1800.66 & 1 & 79.95 & 1809.10 \\
+    \midrule
+    Total/Avg. &  & \textbf{901} & \textbf{7.80} & \textbf{683.97} & 233 & 24.65 & 1527.39 & 223 & 29.53 & 1538.56 & 432 & 31.27 & 1425.12 \\
+    \bottomrule
+  \end{tabular}
+  }
+\end{table}

@@ -1,0 +1,24 @@
+\begin{table}[tb]
+    \centering
+    \caption{Wilcoxon signed-rank test results for different algorithms.}
+    \label{tab:wilcoxon_results}
+    \footnotesize
+    \renewcommand{\arraystretch}{1.08}
+    \setlength{\tabcolsep}{6pt}
+    \begin{tabular}{llrrrrc}
+        \toprule
+        Instance size & Algorithm pairs & $N^{+}$ & $N^{-}$ & $N^{=}$ & $p$-value & Significance \\
+        \midrule
+        \multirow{5}{*}{Small} & DG-ALNS vs. MILP & 229 & 121 & 930 & $<0.05$ & YES \\
+         & DG-ALNS vs. ALNS & 431 & 39 & 810 & $<0.05$ & YES \\
+         & DG-ALNS vs. VNS & 558 & 57 & 665 & $<0.05$ & YES \\
+         & DG-ALNS vs. PSO & 870 & 9 & 401 & $<0.05$ & YES \\
+         & DG-ALNS vs. GA & 1127 & 2 & 151 & $<0.05$ & YES \\
+        \midrule
+        \multirow{4}{*}{Large} & DG-ALNS vs. ALNS & 2460 & 108 & 312 & $<0.05$ & YES \\
+         & DG-ALNS vs. VNS & 2664 & 114 & 102 & $<0.05$ & YES \\
+         & DG-ALNS vs. PSO & 2694 & 108 & 78 & $<0.05$ & YES \\
+         & DG-ALNS vs. GA & 2856 & 16 & 8 & $<0.05$ & YES \\
+        \bottomrule
+    \end{tabular}
+\end{table}
